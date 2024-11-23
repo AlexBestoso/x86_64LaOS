@@ -1,7 +1,6 @@
 all:
-	nasm -f bin boot.asm -o ./bin/boot.bin
+	./build.sh
+code:
+	gcc -static init.c -o _install/init
 clean:
-	rm ./bin/*
-	rm -rf ./*.iso
-gen:
-	./make.sh
+	rm myos.iso
